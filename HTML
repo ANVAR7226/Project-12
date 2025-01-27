@@ -1,0 +1,14 @@
+function filterArray(array, filterFunc) {
+    const result = [];
+    for (let item of array) {
+        if (filterFunc(item)) {
+            result.push(item);
+        }
+    }
+    return result;
+}
+
+const numbers = [1, 2, 3, 4, 5];
+const isOdd = (num) => num % 2 !== 0;
+
+console.log(filterArray(numbers, isOdd));
